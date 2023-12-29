@@ -1,0 +1,40 @@
+﻿@model HastaneGD1.Models.Randevu
+
+@{
+    ViewData["Title"] = "CreateIng";
+}
+
+<h1>For English</h1>
+
+<h4>Appointment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateIng">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Patient Name</label>
+                <input asp-for="HastaAdi" class="form-control" />
+                <span asp-validation-for="HastaAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Patient Surname</label>
+                <input asp-for="HastaSoyadi" class="form-control" />
+                <span asp-validation-for="HastaSoyadi" class="text-danger"></span>
+            </div>
+          
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

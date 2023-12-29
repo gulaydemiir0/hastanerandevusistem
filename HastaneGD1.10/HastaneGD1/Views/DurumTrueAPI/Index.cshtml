@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Randevu>
+
+<h2>Durum True Randevular</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Hasta Adı</th>
+            <th>Hasta Soyadı</th>
+            <th>Randevu Tarihi</th>
+            <th>Doktor Adı</th>
+            <th>Poliklinik Adı</th>
+            <th>Durum</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var randevu in Model)
+        {
+            <tr>
+                <td>@randevu.Id</td>
+                <td>@randevu.HastaAdi</td>
+                <td>@randevu.HastaSoyadi</td>
+                <td>@randevu.RandevuTarihi</td>
+                <td>@randevu.DoktorAdi</td>
+                <td>@randevu.PoliklinikAdi</td>
+                <td>@randevu.Durum</td>
+            </tr>
+        }
+    </tbody>
+</table>
